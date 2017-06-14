@@ -26,8 +26,8 @@
     <meta name="format-detection" content="telephone=no" />
     <meta name="msapplication-tap-highlight" content="no" />
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
-    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below.
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" /> -->
     <!-- Good default declaration:
     * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
     * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
@@ -63,6 +63,10 @@
 <body onload="init()">
 
     <div data-role="page" id="PageHome">
+    
+        <div data-role="header">
+            <img class="NMMUHeaderImage" src="img/iconNMU.png" alt="Logo" /><h1>Home</h1>
+        </div>
 
         <div data-role="content" style="padding-bottom:50px">
 
@@ -116,8 +120,8 @@
         <!--<div style="text-align: center; background-color: #003058; padding-top: 5px">
             <img src="images/bannerNMMULogo.png" alt="NMMU Logo" />
         </div>-->
-        <div data-role="header" style="text-align: center;">
-            <img src="images/bannerNMMULogo.png" alt="NMMU Logo" />
+        <div data-role="header">
+            <img class="NMMUHeaderImage" src="img/iconNMU.png" alt="Logo" /><h1>Personalised</h1>
         </div>
         <div data-role="content" style="padding-bottom:50px">
 
@@ -180,9 +184,9 @@
                 <li>
                     <a href="#PageNMMUID">Profile</a>
                 </li>
-                <li>
+                <!--<li>
                     <a href="#PageUsage">Usage</a>
-                </li>
+                </li>-->
                 <li data-role="list-divider">General</li>
                 <li>
                     <a href="#PageAdverts">Adverts</a>
@@ -327,7 +331,7 @@
 
 
         <div data-role="header">
-            <a href="#PageHome" data-rel="back" data-icon="back">Back</a><h1>News</h1>
+            <a href="#PageHome" data-rel="back" data-icon="back">Back</a><img class="NMMUHeaderImage" src="img/iconNMU.png" alt="Logo" /><h1>News</h1>
         </div>
 
         <div data-role="content">
@@ -339,7 +343,7 @@
     <div data-role="page" id="PageNewsContent">
 
         <div data-role="header">
-            <a href="#PageNews" data-rel="back" data-icon="back">Back</a><h1>News details</h1>
+            <a href="#PageNews" data-rel="back" data-icon="back">Back</a><img class="NMMUHeaderImage" src="img/iconNMU.png" alt="Logo" /><h1>News details</h1>
         </div>
 
         <div data-role="content" id="NewsEntryContent">
@@ -353,7 +357,7 @@
 
 
         <div data-role="header">
-            <a href="#PageHome" data-rel="back" data-icon="back">Back</a><h1>Events</h1>
+            <a href="#PageHome" data-rel="back" data-icon="back">Back</a><img class="NMMUHeaderImage" src="img/iconNMU.png" alt="Logo" /><h1>Events</h1>
         </div>
 
         <div data-role="content">
@@ -365,7 +369,7 @@
     <div data-role="page" id="PageEventsContent">
 
         <div data-role="header">
-            <a href="#PageEvents" data-rel="back" data-icon="back">Back</a><h1>Event details</h1>
+            <a href="#PageEvents" data-rel="back" data-icon="back">Back</a><img class="NMMUHeaderImage" src="img/iconNMU.png" alt="Logo" /><h1>Event details</h1>
         </div>
 
         <div data-role="content" id="EventsEntryContent">
@@ -403,7 +407,7 @@
     <div data-role="page" id="PageExamResults">
 
         <div data-role="header">
-            <a href="#PageLoggedInHome" data-rel="back" data-icon="back">Back</a><img class="NMMUHeaderImage" src="images/LogoWhite.png" alt="Logo" /><h1>Exam results</h1>
+            <a href="#PageLoggedInHome" data-rel="back" data-icon="back">Back</a><img class="NMMUHeaderImage" src="img/iconNMU.png" alt="Logo" /><h1>Exam results</h1>
         </div>
 
         <div data-role="content" id="DivExamResults">
@@ -431,7 +435,7 @@
     <div data-role="page" id="PageExamTimetable">
 
         <div data-role="header">
-            <a href="#PageLoggedInHome" data-rel="back" data-icon="back">Back</a><img class="NMMUHeaderImage" src="images/LogoWhite.png" alt="Logo" /><h1>Exam Timetable</h1>
+            <a href="#PageLoggedInHome" data-rel="back" data-icon="back">Back</a><img class="NMMUHeaderImage" src="img/iconNMU.png" alt="Logo" /><h1>Exam Timetable</h1>
         </div>
 
         <div data-role="content" id="DivExamTimetable">
@@ -461,7 +465,7 @@
     <div data-role="page" id="PageAccountStatus">
 
         <div data-role="header">
-            <a href="#PageLoggedInHome" data-rel="back" data-icon="back">Back</a><img class="NMMUHeaderImage" src="images/LogoWhite.png" alt="Logo" /><h1>Account status</h1>
+            <a href="#PageLoggedInHome" data-rel="back" data-icon="back">Back</a><img class="NMMUHeaderImage" src="img/iconNMU.png" alt="Logo" /><h1>Account status</h1>
         </div>
 
         <div data-role="content" id="DivAccountStatus">
@@ -475,7 +479,7 @@
     <div data-role="page" id="PageGraduationDetails">
 
         <div data-role="header">
-            <a href="#PageLoggedInHome" data-rel="back" data-icon="back">Back</a><img class="NMMUHeaderImage" src="images/LogoWhite.png" alt="Logo" /><h1>Graduation details</h1>
+            <a href="#PageLoggedInHome" data-rel="back" data-icon="back">Back</a><img class="NMMUHeaderImage" src="img/iconNMU.png" alt="Logo" /><h1>Graduation details</h1>
         </div>
 
         <div data-role="content" id="DivGraduationDetails">
@@ -487,7 +491,7 @@
     <div data-role="page" id="PageMyJourney">
 
         <div data-role="header">
-            <a href="#PageHome" data-rel="back" data-icon="back">Back</a><img class="NMMUHeaderImage" src="images/LogoWhite.png" alt="Logo" /><h1>My Journey</h1>
+            <a href="#PageHome" data-rel="back" data-icon="back">Back</a><img class="NMMUHeaderImage" src="img/iconNMU.png" alt="Logo" /><h1>My Journey</h1>
         </div>
 
         <div data-role="content">
@@ -504,7 +508,7 @@
     <div data-role="page" id="PageUsefulContacts">
 
         <div data-role="header">
-            <a href="#PageHome" data-rel="back" data-icon="back">Back</a><img class="NMMUHeaderImage" src="images/LogoWhite.png" alt="Logo" /><h1>Useful contacts</h1>
+            <a href="#PageHome" data-rel="back" data-icon="back">Back</a><img class="NMMUHeaderImage" src="img/iconNMU.png" alt="Logo" /><h1>Useful contacts</h1>
         </div>
 
         <div data-role="content">
@@ -586,7 +590,7 @@
     <div data-role="page" id="PageSocialLinks">
 
         <div data-role="header">
-            <a href="#PageHome" data-rel="back" data-icon="back">Back</a><img class="NMMUHeaderImage" src="images/LogoWhite.png" alt="Logo" /><h1>Social links</h1>
+            <a href="#PageHome" data-rel="back" data-icon="back">Back</a><img class="NMMUHeaderImage" src="img/iconNMU.png" alt="Logo" /><h1>Social links</h1>
         </div>
 
         <div data-role="content">
@@ -614,13 +618,13 @@
     <div data-role="page" id="PageCampusHealth">
 
         <div data-role="header">
-            <a href="#PageHome" data-rel="back" data-icon="back">Back</a><img class="NMMUHeaderImage" src="images/LogoWhite.png" alt="Logo" /><h1>Campus Health</h1>
+            <a href="#PageHome" data-rel="back" data-icon="back">Back</a><img class="NMMUHeaderImage" src="img/iconNMU.png" alt="Logo" /><h1>Campus Health</h1>
         </div>
 
         <div data-role="content">
             <ul data-role="listview" data-divider-theme="b" data-inset="true">
                 <li>
-                    <p>Office hours are between 8:00am and 16:00pm. The numbers provided for after office hours (16:00 - 08:00) are for medical emergencies ONLY.</p>
+                    <p style="white-space:normal">Office hours are between 8:00am and 16:00pm. The numbers provided for after office hours (16:00 - 08:00) are for medical emergencies ONLY.</p>
                 </li>
             </ul>
             <div data-role="collapsible" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
@@ -649,13 +653,13 @@
     <div data-role="page" id="PageSports">
 
         <div data-role="header">
-            <a href="#PageHome" data-rel="back" data-icon="back">Back</a><img class="NMMUHeaderImage" src="images/LogoWhite.png" alt="Logo" /><h1>Sports</h1>
+            <a href="#PageHome" data-rel="back" data-icon="back">Back</a><img class="NMMUHeaderImage" src="img/iconNMU.png" alt="Logo" /><h1>Sports</h1>
         </div>
 
         <div data-role="content">
 
             <ul data-role="listview" data-inset="true" class="ListviewNMMUNoBold">
-                <li style="height:65px;"><img class="ADImage" alt="User Image" src="images/Diba.png" /><p>NMMU currently offers the following sport codes. Please contact the respective sport manager for further information</p></li>
+                <li style="height:65px;"><img class="ADImage" alt="User Image" src="img/Diba.png" /><p style="white-space:normal">NMMU currently offers the following sport codes. Please contact the respective sport manager for further information</p></li>
                 <li>
                     <a href="#" onclick='window.open("http://athletics.nmmu.ac.za/", "_blank", "location=yes");'>Athletics & Athlons</a>
                 </li>
@@ -727,7 +731,7 @@
     <div data-role="page" id="PageAboutUs">
 
         <div data-role="header">
-            <a href="#PageHome" data-rel="back" data-icon="back">Back</a><img class="NMMUHeaderImage" src="images/LogoWhite.png" alt="Logo" /><h1>About us</h1>
+            <a href="#PageHome" data-rel="back" data-icon="back">Back</a><img class="NMMUHeaderImage" src="img/iconNMU.png" alt="Logo" /><h1>About us</h1>
         </div>
 
         <div data-role="content">
@@ -795,7 +799,7 @@
     <!-- NMMU Maps -->
     <div data-role="page" id="PageMaps">
         <div data-role="header">
-            <a href="#PageHome" data-rel="back" data-icon="back">Back</a><img class="NMMUHeaderImage" src="images/LogoWhite.png" alt="Logo" /><h1>Maps</h1>
+            <a href="#PageHome" data-rel="back" data-icon="back">Back</a><img class="NMMUHeaderImage" src="img/iconNMU.png" alt="Logo" /><h1>Maps</h1>
         </div>
 
         <div data-role="content">
@@ -833,7 +837,7 @@
     <div data-role="page" id="PageNCMap">
 
         <div data-role="header">
-            <a href="#PageHome" data-rel="back" data-icon="back">Back</a><img class="NMMUHeaderImage" src="images/LogoWhite.png" alt="Logo" /><h1>North Campus</h1>
+            <a href="#PageHome" data-rel="back" data-icon="back">Back</a><img class="NMMUHeaderImage" src="img/iconNMU.png" alt="Logo" /><h1>North Campus</h1>
         </div>
 
         <div data-role="content" class="NMMUMapContent">
@@ -844,7 +848,7 @@
     <div data-role="page" id="PageSCMap">
 
         <div data-role="header">
-            <a href="#PageHome" data-rel="back" data-icon="back">Back</a><img class="NMMUHeaderImage" src="images/LogoWhite.png" alt="Logo" /><h1>South Campus</h1>
+            <a href="#PageHome" data-rel="back" data-icon="back">Back</a><img class="NMMUHeaderImage" src="img/iconNMU.png" alt="Logo" /><h1>South Campus</h1>
         </div>
 
         <div data-role="content" class="NMMUMapContent">
@@ -855,7 +859,7 @@
     <div data-role="page" id="Page2NDMap">
 
         <div data-role="header">
-            <a href="#PageHome" data-rel="back" data-icon="back">Back</a><img class="NMMUHeaderImage" src="images/LogoWhite.png" alt="Logo" /><h1>2nd Avenue Campus</h1>
+            <a href="#PageHome" data-rel="back" data-icon="back">Back</a><img class="NMMUHeaderImage" src="img/iconNMU.png" alt="Logo" /><h1>2nd Avenue Campus</h1>
         </div>
 
         <div data-role="content" class="NMMUMapContent">
@@ -866,7 +870,7 @@
     <div data-role="page" id="PageBSMap">
 
         <div data-role="header">
-            <a href="#PageHome" data-rel="back" data-icon="back">Back</a><img class="NMMUHeaderImage" src="images/LogoWhite.png" alt="Logo" /><h1>Bird Street Campus</h1>
+            <a href="#PageHome" data-rel="back" data-icon="back">Back</a><img class="NMMUHeaderImage" src="img/iconNMU.png" alt="Logo" /><h1>Bird Street Campus</h1>
         </div>
 
         <div data-role="content" class="NMMUMapContent">
@@ -877,7 +881,7 @@
     <div data-role="page" id="PageGCMap">
 
         <div data-role="header">
-            <a href="#PageHome" data-rel="back" data-icon="back">Back</a><img class="NMMUHeaderImage" src="images/LogoWhite.png" alt="Logo" /><h1>George Campus</h1>
+            <a href="#PageHome" data-rel="back" data-icon="back">Back</a><img class="NMMUHeaderImage" src="img/iconNMU.png" alt="Logo" /><h1>George Campus</h1>
         </div>
 
         <div data-role="content" class="NMMUMapContent">
@@ -888,7 +892,7 @@
     <div data-role="page" id="PageMVMap">
 
         <div data-role="header">
-            <a href="#PageHome" data-rel="back" data-icon="back">Back</a><img class="NMMUHeaderImage" src="images/LogoWhite.png" alt="Logo" /><h1>Missionvale Campus</h1>
+            <a href="#PageHome" data-rel="back" data-icon="back">Back</a><img class="NMMUHeaderImage" src="img/iconNMU.png" alt="Logo" /><h1>Missionvale Campus</h1>
         </div>
 
         <div data-role="content" class="NMMUMapContent">
@@ -900,7 +904,7 @@
     <div id="PageGetDirections" data-role="page">
 
         <div data-role="header">
-            <a href="#PageHome" data-rel="back" data-icon="back">Back</a><img class="NMMUHeaderImage" src="images/LogoWhite.png" alt="Logo" /><h1>Get directions</h1>
+            <a href="#PageHome" data-rel="back" data-icon="back">Back</a><img class="NMMUHeaderImage" src="img/iconNMU.png" alt="Logo" /><h1>Get directions</h1>
         </div>
 
         <div data-role="content">
@@ -933,7 +937,7 @@
     <div data-role="page" id="PageEmergency">
 
         <div data-role="header">
-            <a href="#PageHome" data-rel="back" data-icon="back">Back</a><img class="NMMUHeaderImage" src="images/LogoWhite.png" alt="Logo" /><h1>Emergency</h1>
+            <a href="#PageHome" data-rel="back" data-icon="back">Back</a><img class="NMMUHeaderImage" src="img/iconNMU.png" alt="Logo" /><h1>Emergency</h1>
         </div>
 
         <div data-role="content">
@@ -969,7 +973,7 @@
     <div data-role="page" id="PageAdverts">
 
         <div data-role="header">
-            <a href="#PageLoggedInHome" data-rel="back" data-icon="back">Back</a><img class="NMMUHeaderImage" src="images/LogoWhite.png" alt="Logo" /><h1>Adverts</h1>
+            <a href="#PageLoggedInHome" data-rel="back" data-icon="back">Back</a><img class="NMMUHeaderImage" src="img/iconNMU.png" alt="Logo" /><h1>Adverts</h1>
         </div>
 
         <div data-role="content">
@@ -995,7 +999,7 @@
     <div data-role="page" id="PageAdvertContent">
 
         <div data-role="header">
-            <a href="#PageAdverts" data-rel="back" data-icon="back">Back</a><img class="NMMUHeaderImage" src="images/LogoWhite.png" alt="Logo" /><h1>Advert details</h1>
+            <a href="#PageAdverts" data-rel="back" data-icon="back">Back</a><img class="NMMUHeaderImage" src="img/iconNMU.png" alt="Logo" /><h1>Advert details</h1>
         </div>
 
         <div data-role="content">
@@ -1007,7 +1011,7 @@
     <div data-role="page" id="PageAdvertSearch">
 
         <div data-role="header">
-            <a href="#PageAdverts" data-rel="back" data-icon="back">Back</a><img class="NMMUHeaderImage" src="images/LogoWhite.png" alt="Logo" /><h1>Advert search</h1>
+            <a href="#PageAdverts" data-rel="back" data-icon="back">Back</a><img class="NMMUHeaderImage" src="img/iconNMU.png" alt="Logo" /><h1>Advert search</h1>
         </div>
 
         <div data-role="content" id="PageAdvertSearchContent">
@@ -1032,7 +1036,7 @@
     <div data-role="page" id="PageSearchAdvertContent">
 
         <div data-role="header">
-            <a href="#PageAdverts" data-rel="back" data-icon="back">Back</a><img class="NMMUHeaderImage" src="images/LogoWhite.png" alt="Logo" /><h1>Advert details</h1>
+            <a href="#PageAdverts" data-rel="back" data-icon="back">Back</a><img class="NMMUHeaderImage" src="img/iconNMU.png" alt="Logo" /><h1>Advert details</h1>
         </div>
 
         <!--        <div data-role="content" id="SearchAdvertEntryText">
@@ -1046,7 +1050,7 @@
     <div data-role="page" id="PageAdvertPost">
 
         <div data-role="header">
-            <a href="#PageAdverts" data-rel="back" data-icon="back">Back</a><img class="NMMUHeaderImage" src="images/LogoWhite.png" alt="Logo" /><h1>Advert post</h1>
+            <a href="#PageAdverts" data-rel="back" data-icon="back">Back</a><img class="NMMUHeaderImage" src="img/iconNMU.png" alt="Logo" /><h1>Advert post</h1>
         </div>
 
         <div data-role="content">
@@ -1118,7 +1122,7 @@
     <div data-role="page" id="PageTTSelectTerm">
 
         <div data-role="header">
-            <a href="#PageLoggedInHome" data-rel="back" data-icon="back">Back</a><img class="NMMUHeaderImage" src="images/LogoWhite.png" alt="Logo" /><h1>Select term</h1>
+            <a href="#PageLoggedInHome" data-rel="back" data-icon="back">Back</a><img class="NMMUHeaderImage" src="img/iconNMU.png" alt="Logo" /><h1>Select term</h1>
         </div>
 
         <div data-role="content">
@@ -1144,7 +1148,7 @@
     <div data-role="page" id="PageTTSelectDay">
 
         <div data-role="header">
-            <a href="#PageTTSelectTerm" data-rel="back" data-icon="back">Back</a><img class="NMMUHeaderImage" src="images/LogoWhite.png" alt="Logo" /><h1>Select day</h1>
+            <a href="#PageTTSelectTerm" data-rel="back" data-icon="back">Back</a><img class="NMMUHeaderImage" src="img/iconNMU.png" alt="Logo" /><h1>Select day</h1>
         </div>
 
         <div data-role="content">
@@ -1176,7 +1180,7 @@
     <div data-role="page" id="PageTimetable">
 
         <div data-role="header">
-            <a href="#PageTTSelectDay" data-rel="back" data-icon="back">Back</a><img class="NMMUHeaderImage" src="images/LogoWhite.png" alt="Logo" /><h1>Timetable</h1>
+            <a href="#PageTTSelectDay" data-rel="back" data-icon="back">Back</a><img class="NMMUHeaderImage" src="img/iconNMU.png" alt="Logo" /><h1>Timetable</h1>
         </div>
 
         <div data-role="content" id="DivTimetable">
@@ -1191,7 +1195,7 @@
     <div data-role="page" id="PageAdvertEdit">
 
         <div data-role="header">
-            <a href="#PageAdverts" data-rel="back" data-icon="back">Back</a><img class="NMMUHeaderImage" src="images/LogoWhite.png" alt="Logo" /><h1>Advert edit</h1>
+            <a href="#PageAdverts" data-rel="back" data-icon="back">Back</a><img class="NMMUHeaderImage" src="img/iconNMU.png" alt="Logo" /><h1>Advert edit</h1>
         </div>
 
         <div data-role="content">
@@ -1203,7 +1207,7 @@
     <div data-role="page" id="PageEditAdvertContent">
 
         <div data-role="header">
-            <a href="#PageAdverts" data-rel="back" data-icon="back">Back</a><img class="NMMUHeaderImage" src="images/LogoWhite.png" alt="Logo" /><h1>Advert details</h1>
+            <a href="#PageAdverts" data-rel="back" data-icon="back">Back</a><img class="NMMUHeaderImage" src="img/iconNMU.png" alt="Logo" /><h1>Advert details</h1>
         </div>
 
         <div data-role="content">
@@ -1216,7 +1220,7 @@
     <div data-role="page" id="PageMyModules">
 
         <div data-role="header">
-            <a href="#PageHome" data-rel="back" data-icon="back">Back</a><img class="NMMUHeaderImage" src="images/LogoWhite.png" alt="Logo" /><h1>Modules</h1>
+            <a href="#PageHome" data-rel="back" data-icon="back">Back</a><img class="NMMUHeaderImage" src="img/iconNMU.png" alt="Logo" /><h1>Modules</h1>
         </div>
 
         <div data-role="content">
@@ -1227,7 +1231,7 @@
     <div data-role="page" id="PageMyModulesContent">
 
         <div data-role="header">
-            <a href="#PageNews" data-rel="back" data-icon="back">Back</a><img class="NMMUHeaderImage" src="images/LogoWhite.png" alt="Logo" /><h1>Module details</h1>
+            <a href="#PageNews" data-rel="back" data-icon="back">Back</a><img class="NMMUHeaderImage" src="img/iconNMU.png" alt="Logo" /><h1>Module details</h1>
         </div>
 
         <div data-role="content">
@@ -1240,7 +1244,7 @@
     <div data-role="page" id="PageClassList">
 
         <div data-role="header">
-            <a href="#PageNews" data-rel="back" data-icon="back">Back</a><img class="NMMUHeaderImage" src="images/LogoWhite.png" alt="Logo" /><h1>Class list</h1>
+            <a href="#PageNews" data-rel="back" data-icon="back">Back</a><img class="NMMUHeaderImage" src="img/iconNMU.png" alt="Logo" /><h1>Class list</h1>
         </div>
 
         <div data-role="content" id="DivClassList">
@@ -1251,7 +1255,7 @@
     <div data-role="page" id="PageFeedback">
 
         <div data-role="header">
-            <a href="#PageNews" data-rel="back" data-icon="back">Back</a><img class="NMMUHeaderImage" src="images/LogoWhite.png" alt="Logo" /><h1>Feedback / Request</h1>
+            <a href="#PageNews" data-rel="back" data-icon="back">Back</a><img class="NMMUHeaderImage" src="img/iconNMU.png" alt="Logo" /><h1>Feedback / Request</h1>
         </div>
 
         <div data-role="content">
@@ -1279,7 +1283,7 @@
     <div data-role="page" id="PageAlmanac">
 
         <div data-role="header">
-            <a href="#PageNews" data-rel="back" data-icon="back">Back</a><img class="NMMUHeaderImage" src="images/LogoWhite.png" alt="Logo" /><h1>Almanac</h1>
+            <a href="#PageNews" data-rel="back" data-icon="back">Back</a><img class="NMMUHeaderImage" src="img/iconNMU.png" alt="Logo" /><h1>Almanac</h1>
         </div>
 
         <div data-role="content">
@@ -1291,7 +1295,7 @@
     <div data-role="page" id="PageRegisteredAssets">
 
         <div data-role="header">
-            <a href="#PageNews" data-rel="back" data-icon="back">Back</a><img class="NMMUHeaderImage" src="images/LogoWhite.png" alt="Logo" /><h1>Registered assets</h1>
+            <a href="#PageNews" data-rel="back" data-icon="back">Back</a><img class="NMMUHeaderImage" src="img/iconNMU.png" alt="Logo" /><h1>Registered assets</h1>
         </div>
 
         <div data-role="content">
@@ -1303,7 +1307,7 @@
     <div data-role="page" id="PageNMMUID">
 
         <div data-role="header">
-            <a href="#PageLoggedInHome" data-rel="back" data-icon="back">Back</a><img class="NMMUHeaderImage" src="images/LogoWhite.png" alt="Logo" /><h1>NMMU Profile</h1>
+            <a href="#PageLoggedInHome" data-rel="back" data-icon="back">Back</a><img class="NMMUHeaderImage" src="img/iconNMU.png" alt="Logo" /><h1>NMMU Profile</h1>
         </div>
 
         <div data-role="content">
@@ -1316,7 +1320,7 @@
     <div data-role="page" id="PageEmailProfile">
 
         <div data-role="header">
-            <a href="#PageNMMUID" data-rel="back" data-icon="back">Back</a><img class="NMMUHeaderImage" src="images/LogoWhite.png" alt="Logo" /><h1>Mail business card</h1>
+            <a href="#PageNMMUID" data-rel="back" data-icon="back">Back</a><img class="NMMUHeaderImage" src="img/iconNMU.png" alt="Logo" /><h1>Mail business card</h1>
         </div>
 
         <div data-role="content">
@@ -1336,7 +1340,7 @@
     <div data-role="page" id="PageLeaveBalance">
 
         <div data-role="header">
-            <a href="#PageLoggedInHome" data-rel="back" data-icon="back">Back</a><img class="NMMUHeaderImage" src="images/LogoWhite.png" alt="Logo" /><h1>Leave balance</h1>
+            <a href="#PageLoggedInHome" data-rel="back" data-icon="back">Back</a><img class="NMMUHeaderImage" src="img/iconNMU.png" alt="Logo" /><h1>Leave balance</h1>
         </div>
 
         <div data-role="content">
@@ -1348,7 +1352,7 @@
     <div data-role="page" id="PageUsage">
 
         <div data-role="header">
-            <a href="#PageLoggedInHome" data-rel="back" data-icon="back">Back</a><img class="NMMUHeaderImage" src="images/LogoWhite.png" alt="Logo" /><h1>Usage</h1>
+            <a href="#PageLoggedInHome" data-rel="back" data-icon="back">Back</a><img class="NMMUHeaderImage" src="img/iconNMU.png" alt="Logo" /><h1>Usage</h1>
         </div>
 
         <div data-role="content">

@@ -4,13 +4,13 @@
     <description>
         Nelson Mandela University application.
     </description>
-    <author email="support@phonegap.com" href="http://phonegap.com">
-        PhoneGap Team
+    <author email="webmaster@nmmu.ac.za" href="http://www.mandelauniversity.ac.za">
+        ICT IS Development
     </author>
     <content src="index.html" />
     <preference name="DisallowOverscroll" value="true" />
     <preference name="android-minSdkVersion" value="14" />
- <preference name="StatusBarOverlaysWebView" value="true" /> <preference name="StatusBarBackgroundColor" value="#000000" />  <plugin name="cordova-plugin-battery-status" source="npm" spec="~1.1.1" />
+ 	<plugin name="cordova-plugin-battery-status" source="npm" spec="~1.1.1" />
     <plugin name="cordova-plugin-camera" source="npm" spec="~2.1.1" />
     <plugin name="cordova-plugin-media-capture" source="npm" spec="~1.2.0" />
     <plugin name="cordova-plugin-console" source="npm" spec="~1.0.2" />

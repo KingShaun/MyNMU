@@ -21,7 +21,7 @@
 {
     float: right;
     display: inline;
-    padding-top: 8px;
+    padding-top: 12px;
     padding-right: 10px;
 }
 
@@ -30,6 +30,9 @@ font-weight: normal;
 font-size: smaller;
 }
 
+.ui-listview > li p {
+  white-space: normal;
+}
  /*.ui-li-thumb, .ui-li-icon {
     left: 1px;
     max-height: 100px;
@@ -128,7 +131,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#003058', end
 }
 
 .ui-page-theme-a .ui-bar-inherit {
-    background: #003058
+    /*background: #003058*/
+    background: #061c2c
 }
 /*.ui-page-theme-a .ui-bar-inherit {
 background: rgb(0,48,88);

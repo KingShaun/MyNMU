@@ -39,7 +39,7 @@
 
 function onDeviceReady() {
 
-          document.body.style.marginTop = "20px";
+   	StatusBar.overlaysWebView(false);
 
     //Stores news entries
     var NewsEntries = [];
@@ -55,7 +55,7 @@ function onDeviceReady() {
         var s = '';
         $.mobile.loading('show');
 
-        $.get("http://news.nmmu.ac.za/?rss=nmmu-news", {}, function (res, code) {
+        $.get("http://news.nmmu.ac.za/News?rss=news", {}, function (res, code) {
             var xml = $(res);
             var items = xml.find("item");
 
@@ -75,17 +75,19 @@ function onDeviceReady() {
             
             $.each(NewsEntries, function (i, v) {
                 //s += '<li><a href="#PageNewsContent" class="NewsContentLink" data-entryid="' + i + '">' + v.title + '</a></li>';
+
                 s += '<li>';
                 s += '<a href="#PageNewsContent" class="NewsContentLink" data-entryid="' + i + '">';
-                s += '<h3>' + v.title + '</h3>';
+                s += '<p><strong>' + v.title + '</strong></p>';
                 s += '<p>' + v.description + '</p>';
                 s += '</a>';
                 s += '</li>';
-            });
+
+            });            
             }
             else {
                 s += '<li>';
-                s += '<p>No events listed.</p>';
+                s += '<p>No news articles found.</p>';
                 s += '</li>';
             }
             $.mobile.loading('hide');
@@ -138,7 +140,7 @@ function onDeviceReady() {
 
         $.mobile.loading('show');
 
-        $.get("http://news.nmmu.ac.za/?rss=NMMU-events", {}, function (res, code) {
+        $.get("http://happening.nmmu.ac.za/Events?rss=events", {}, function (res, code) {
             var xml = $(res);
             var items = xml.find("item");
 
@@ -157,7 +159,7 @@ function onDeviceReady() {
             $.each(EventsEntries, function (i, v) {
                 s += '<li>';
                 s += '<a href="#PageEventsContent" class="EventsContentLink" data-entryid="' + i + '">';
-                s += '<h3>' + v.title + '</h3>';
+                s += '<p><strong>' + v.title + '</strong></p>';
                 s += '<p>' + v.description + '</p>';
                 s += '</a>';
                 s += '</li>';
@@ -183,9 +185,9 @@ function onDeviceReady() {
 
     $(document).on('pagebeforeshow', '#PageEventsContent', function () {
         var contentHTML = "";
-        contentHTML += '<li data-role="list-divider">' + EventsEntries[SelectedEventsEntry].title + '</li>';
+        contentHTML += '<li data-role="list-divider" style="white-space:normal">' + EventsEntries[SelectedEventsEntry].title + '</li>';
         contentHTML += '<li>'
-        contentHTML += '<h2>' + EventsEntries[SelectedEventsEntry].description + '</h2>';
+        contentHTML += '<h2 style="white-space:normal">' + EventsEntries[SelectedEventsEntry].description + '</h2>';
         contentHTML += '<p><strong>Event date:</strong> ' + EventsEntries[SelectedEventsEntry].eventdate + '</p>';
         //contentHTML += '<p><a href="#" class="ReadEntry">Read Entry on Site</a></p>';
         contentHTML += '</li>'
