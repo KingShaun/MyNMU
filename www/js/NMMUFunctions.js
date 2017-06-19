@@ -39,7 +39,8 @@
 
 function onDeviceReady() {
 
-   	StatusBar.overlaysWebView(false);
+    StatusBar.overlaysWebView(false);
+    StatusBar.backgroundColorByHexString("#CCC");
 
     //Stores news entries
     var NewsEntries = [];
