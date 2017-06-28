@@ -667,8 +667,8 @@ function onDeviceReady() {
 
         $.mobile.loading('show');
 
-        directionsDisplay = new google.maps.DirectionsRenderer();
-        directionsService = new google.maps.DirectionsService();
+       // directionsDisplay = new google.maps.DirectionsRenderer();
+       // directionsService = new google.maps.DirectionsService();
 
         currentPosition = new google.maps.LatLng(lat, lon);
 
@@ -678,7 +678,7 @@ function onDeviceReady() {
             mapTypeId: google.maps.MapTypeId.ROADMAP
         });
 
-        directionsDisplay.setMap(map);
+       // directionsDisplay.setMap(map);
 
         var currentPositionMarker = new google.maps.Marker({
             position: currentPosition,
@@ -691,6 +691,10 @@ function onDeviceReady() {
             infowindow.setContent("Current position: latitude: " + lat + " longitude: " + lon);
             infowindow.open(map, currentPositionMarker);
         });
+
+        var center = map.getCenter();
+        google.maps.event.trigger(map, "resize");
+        map.setCenter(center);
 
         $.mobile.loading('hide');
     }
@@ -760,7 +764,7 @@ function onDeviceReady() {
         //Clear directions
         $('#directions').html('');
         //Get user's location
-        navigator.geolocation.getCurrentPosition(locSuccess, locError);
+        navigator.geolocation.getCurrentPosition(locSuccess, locError, { timeout: 30000 });
     });
 
     $(document).on('pageinit', '#PageGetDirections', function () {
