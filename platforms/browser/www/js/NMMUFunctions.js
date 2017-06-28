@@ -673,7 +673,7 @@ function onDeviceReady() {
         currentPosition = new google.maps.LatLng(lat, lon);
 
         map = new google.maps.Map(document.getElementById('map_canvas'), {
-            zoom: 12,
+            zoom: 15,
             center: currentPosition,
             mapTypeId: google.maps.MapTypeId.ROADMAP
         });
