@@ -767,6 +767,7 @@ function onDeviceReady() {
     $(document).on('pageshow', '#PageGetDirections', function () {
         $(window).resize(function () {
             google.maps.event.trigger(map, 'resize');
+            map.setCenter(currentPosition);
         });
         google.maps.event.trigger(map, 'resize');
         map.setCenter(currentPosition);
