@@ -665,20 +665,19 @@ function onDeviceReady() {
 
     function initialize(lat, lon) {
 
-        $.mobile.loading('show');
-
-       // directionsDisplay = new google.maps.DirectionsRenderer();
-       // directionsService = new google.maps.DirectionsService();
+        directionsDisplay = new google.maps.DirectionsRenderer();
+        directionsService = new google.maps.DirectionsService();
 
         currentPosition = new google.maps.LatLng(lat, lon);
 
         map = new google.maps.Map(document.getElementById('map_canvas'), {
             zoom: 15,
             center: currentPosition,
+            enableHighAccuracy: true,
             mapTypeId: google.maps.MapTypeId.ROADMAP
         });
 
-       // directionsDisplay.setMap(map);
+        directionsDisplay.setMap(map);
 
         var currentPositionMarker = new google.maps.Marker({
             position: currentPosition,
@@ -692,11 +691,9 @@ function onDeviceReady() {
             infowindow.open(map, currentPositionMarker);
         });
 
-        var center = map.getCenter();
-        google.maps.event.trigger(map, "resize");
-        map.setCenter(center);
+        //google.maps.event.trigger(map, 'resize');
+        //map.setCenter(currentPosition);
 
-        $.mobile.loading('hide');
     }
 
     function locError(error) {
@@ -764,7 +761,15 @@ function onDeviceReady() {
         //Clear directions
         $('#directions').html('');
         //Get user's location
-        navigator.geolocation.getCurrentPosition(locSuccess, locError, { timeout: 30000 });
+        navigator.geolocation.getCurrentPosition(locSuccess, locError);
+    });
+
+    $(document).on('pageshow', '#PageGetDirections', function () {
+        $(window).resize(function () {
+            google.maps.event.trigger(map, 'resize');
+        });
+        google.maps.event.trigger(map, 'resize');
+        map.setCenter(currentPosition);
     });
 
     $(document).on('pageinit', '#PageGetDirections', function () {

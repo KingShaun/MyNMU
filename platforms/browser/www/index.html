@@ -37,9 +37,8 @@
     * Create your own at http://cspisawesome.com
     -->
     <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
-
     <!-- <link rel="stylesheet" type="text/css" href="css/index.css" /> -->
-    
+
     <link rel="stylesheet" href="css/jquery.mobile-1.4.4.min.css" />
     <script src="js/jquery-1.11.1.min.js"></script>
     <script src="js/jquery.mobile-1.4.4.min.js"></script>
@@ -56,15 +55,15 @@
     <!--<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>-->
     <script type="text/javascript" src="http://maps.google.com/maps/api/js"></script>
 
-    <script src="js/NMMUFunctions.js"></script>
-    
+
+
     <title>Mandela University Mobile Application</title>
 </head>
 
 <body onload="init()">
 
     <div data-role="page" id="PageHome">
-    
+
         <div data-role="header">
             <img class="NMMUHeaderImage" src="img/iconNMU.png" alt="Logo" /><h1>Home</h1>
         </div>
@@ -162,7 +161,7 @@
 
             <ul data-role="listview" data-divider-theme="a" data-inset="true" id="ListviewStudents" class="ListviewNMMUNoBold">
                 <!--                <li data-role="list-divider" role="heading">My NMMU menu items
-            </li>-->
+                </li>-->
                 <li data-role="list-divider">My information</li>
                 <li>
                     <a href="#PageAccountStatus">Account status</a>
@@ -760,17 +759,17 @@
                     Email us:
                 </li>
                 <li data-icon="mail">
-                    <a href="mailto:admissions@nmmu.ac.za?subject=Prospective student" >
+                    <a href="mailto:admissions@nmmu.ac.za?subject=Prospective student">
                         <p>Do you want to study here?</p>
                     </a>
                 </li>
                 <li data-icon="mail">
-                    <a href="mailto:international@nmmu.ac.za?subject=International student" >
+                    <a href="mailto:international@nmmu.ac.za?subject=International student">
                         <p>Are you from outside South Africa?</p>
                     </a>
                 </li>
                 <li data-icon="mail">
-                    <a href="mailto:info@nmmu.ac.za?subject=General inquiry" >
+                    <a href="mailto:info@nmmu.ac.za?subject=General inquiry">
                         <p>Neither of the above.</p>
                     </a>
                 </li>
@@ -812,7 +811,7 @@
                 <li data-icon="location">
                     <a href="#" onclick='window.open("http://maps.nmmu.ac.za", "_blank", "location=yes");'>Maps</a>
                 </li>
-                <li data-role="list-divider">Quick maps</li>
+                <li data-role="list-divider">Quick maps:</li>
                 <li data-icon="location">
                     <a href="#PageNCMap">North Campus</a>
                 </li>
@@ -910,26 +909,22 @@
 
         <div data-role="content">
             <div class="ui-bar-c ui-corner-all ui-shadow">
-                <div id="map_canvas" style="height: 300px;"></div>
-            </div>
-            <!--            <div data-role="fieldcontain">
-                <label for="target-dest">Target Destination:</label>
-                <input type="text" name="target-dest" id="target-dest" value="" />
-            </div>-->
-            <div data-role="fieldcontain">
-                <label for="target-dest" class="select">Target Destination:</label>
-                <select name="target-dest" id="target-dest">
-                    <option value="-33.998578, 25.672194">North Campus</option>
-                    <option value="-34.005325, 25.669783">South Campus</option>
-                    <option value="-33.987003, 25.658269">2nd Avenue</option>
-                    <option value="-33.964867, 25.617111">Bird Street</option>
-                    <option value="-33.970492, 22.534097">George Campus</option>
-                    <option value="-33.870628, 25.550636">Missionvale</option>
-                </select>
-            </div>
-            <a href="#" id="directions-button" data-role="button" data-mini="true">Get Directions</a>
-            <div id="results" style="display: none;">
-                <div id="directions"></div>
+                <div id="map_canvas" style="height: 60vh;"></div>
+                <div data-role="fieldcontain">
+                    <label for="target-dest" class="select">Target Destination:</label>
+                    <select name="target-dest" id="target-dest">
+                        <option value="-33.998578, 25.672194">North Campus</option>
+                        <option value="-34.005325, 25.669783">South Campus</option>
+                        <option value="-33.987003, 25.658269">2nd Avenue</option>
+                        <option value="-33.964867, 25.617111">Bird Street</option>
+                        <option value="-33.970492, 22.534097">George Campus</option>
+                        <option value="-33.870628, 25.550636">Missionvale</option>
+                    </select>
+                </div>
+                <a href="#" id="directions-button" data-role="button" data-mini="true">Get Directions</a>
+                <div id="results" style="display: none;">
+                    <div id="directions"></div>
+                </div>
             </div>
         </div>
     </div>
@@ -1363,6 +1358,7 @@
     <!-- End Phone and Internet usage -->
 
     <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/NMMUFunctions.js"></script>
     <!-- <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript">
         app.initialize();
