@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="za.ac.mandelauniversity.www" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>MyNMU</name>
+    <name>Mandela University</name>
     <description>
-        Nelson Mandela University application.
+        Nelson Mandela University application for guests, staff and students.
     </description>
     <author email="webmaster@nmmu.ac.za" href="http://www.mandelauniversity.ac.za">
         ICT IS Development
