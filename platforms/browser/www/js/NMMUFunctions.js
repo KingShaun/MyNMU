@@ -190,7 +190,7 @@ function onDeviceReady() {
         contentHTML += '<li data-role="list-divider" style="white-space:normal">' + EventsEntries[SelectedEventsEntry].title + '</li>';
         contentHTML += '<li>'
         contentHTML += '<h2 style="white-space:normal">' + EventsEntries[SelectedEventsEntry].description + '</h2>';
-        contentHTML += '<p><strong>Event date:</strong> ' + new Date(EventsEntries[SelectedEventsEntry].eventdate) + '</p>';
+        contentHTML += '<p><strong>Event date:</strong> ' + moment(new Date(EventsEntries[SelectedEventsEntry].eventdate)).format('dddd, MMMM Do YYYY, h:mm a') + '</p>';
         //contentHTML += '<p><a href="#" class="ReadEntry">Read Entry on Site</a></p>';
         contentHTML += '</li>'
         $("#EventsEntryText").html(contentHTML);
