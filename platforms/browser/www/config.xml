@@ -6,9 +6,9 @@
     <feature name="Device">
         <param name="browser-package" value="Device" />
     </feature>
-    <name>MyNMU</name>
+    <name>MyMandela</name>
     <description>
-        Nelson Mandela University application.
+        Nelson Mandela University application for guests, staff and students.
     </description>
     <author email="webmaster@nmmu.ac.za" href="http://www.mandelauniversity.ac.za">
         ICT IS Development
